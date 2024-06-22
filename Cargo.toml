@@ -1,0 +1,14 @@
+[package]
+name = "closure_capture"
+version = "0.0.0"
+authors = ["xutianyi <xutianyi1999@live.com>"]
+description = "A `cargo generate` template for quick-starting a procedural macro crate"
+keywords = ["template", "proc_macro", "procmacro"]
+edition = "2018"
+
+[lib]
+proc-macro = false
+
+[dependencies]
+
+
