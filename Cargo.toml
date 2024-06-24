@@ -1,10 +1,12 @@
 [package]
 name = "closure_capture"
-version = "0.0.0"
+version = "0.1.0"
 authors = ["xutianyi <xutianyi1999@live.com>"]
-description = "A `cargo generate` template for quick-starting a procedural macro crate"
-keywords = ["template", "proc_macro", "procmacro"]
+description = "Capture variables are moved into closure or async block"
+keywords = ["macro", "closure", "async"]
 edition = "2018"
+license = "Apache-2.0"
+repository = "https://github.com/xutianyi1999/closure-capture"
 
 [lib]
 proc-macro = false
