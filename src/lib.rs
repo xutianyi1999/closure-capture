@@ -62,31 +62,15 @@ macro_rules! closure {
     };
 }
 
-pub fn test() {
-    let a = 1;
-    let b = 2;
+macro_rules! async_block {
+    ([$($args1:tt)*] async $block:block) => {
+        {
+            wrap_process!($($args1)*);
 
-    let r = closure!([a, mut b] (c: i32, d) -> i32 {
-        b -= 1;
-        a + b + c + d
-    })(1, 1);
-
-    println!("{}", r)
-}
-
-#[cfg(test)]
-mod test {
-
-    #[test]
-    fn test1() {
-        let a = 1;
-        let b = 2;
-
-        let r = closure!([a, mut b] (c: i32, d) -> i32 {
-            b -= 1;
-            a + b + c + d
-        })(1, 1);
-
-        println!("{}", r)
-    }
+            async {
+                move_process!($($args1)*);
+                $block
+            }
+        }
+    };
 }
