@@ -4,7 +4,7 @@ closure-capture
 Capture variables are moved into closure or async block
 
 [![Latest version](https://img.shields.io/crates/v/closure-capture.svg)](https://crates.io/crates/closure-capture)
-[![Documentation](https://docs.rs/closure-capture/badge.svg)](https://docs.rs/closure-capture)
+[![Documentation](https://docs.rs/closure_capture/badge.svg)](https://docs.rs/closure-capture)
 ![License](https://img.shields.io/crates/l/log.svg)
 
 
