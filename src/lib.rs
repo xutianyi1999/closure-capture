@@ -56,7 +56,7 @@ macro_rules! closure {
             }
         }
     };
-    ([$($args1:tt)*] ($($args2:tt)*) -> $ret:tt $expr:expr) => {
+    ([$($args1:tt)*] ($($args2:tt)*) -> $ret:ty $expr:expr) => {
         {
             $crate::_wrap_process!($($args1)*);
 
