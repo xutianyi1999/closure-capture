@@ -6,15 +6,15 @@ pub struct _Wrap<T: ?Sized>(pub T);
 #[doc(hidden)]
 macro_rules! _wrap_process {
     ($arg:ident, $($args:tt)*) => {
-        _wrap_process!($arg);
-        _wrap_process!($($args)*);
+        $crate::_wrap_process!($arg);
+        $crate::_wrap_process!($($args)*);
     };
     (mut $arg:ident, $($args:tt)*) => {
-        _wrap_process!($arg);
-        _wrap_process!($($args)*);
+        $crate::_wrap_process!($arg);
+        $crate::_wrap_process!($($args)*);
     };
     (mut $arg:ident) => {
-        _wrap_process!($arg);
+        $crate::_wrap_process!($arg);
     };
     ($arg:ident) => {
         let $arg = $crate::_Wrap($arg);
@@ -26,12 +26,12 @@ macro_rules! _wrap_process {
 #[doc(hidden)]
 macro_rules! _move_process {
      ($arg:ident, $($args:tt)*) => {
-        _move_process!($arg);
-        _move_process!($($args)*);
+        $crate::_move_process!($arg);
+        $crate::_move_process!($($args)*);
     };
     (mut $arg:ident, $($args:tt)*) => {
-        _move_process!(mut $arg);
-        _move_process!($($args)*);
+        $crate::_move_process!(mut $arg);
+        $crate::_move_process!($($args)*);
     };
     (mut $arg:ident) => {
        let $arg = $arg;
